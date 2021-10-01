@@ -1,35 +1,26 @@
 #!/bin/bash
 
-#dconf
-pacman -S dconf --noconfirm
+#install yay and git before-hand
+yay -Syu
 
-#install tilix and tilda
-pacman -S tilix --noconfirm
-pacman -S tilda --noconfirm
+#dconf and wget
+pacman -S dconf wget --noconfirm
 
-#install git
-pacman -S --needed git base-devel --noconfirm
+#gdm
+pacman -S gdm --noconfirm
 
-#install yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si$ 
-cd ..
-rm -r yay
+#budgie
+pacman -S --needed budgie-desktop network-manager-applet gnome-control-center budgie-desktop-view budgie-extras budgie-screensaver gnome-calculator gnome-tweaks firefox --noconfirm
 
-#budgie shit
-yay -S -Yg budgie-clipboard-applet
-yay -S -Yg budgie-screenshot-applet
-pacman -S budgie-desktop-view --noconfirm
-pacman -S budgie-extras --noconfirm
-pacman -S budgie-screensaver --noconfirm
+#budgie extra (SU NOTE)
+yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
 
 #themes and shit
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
 cd WhiteSur-gtk-theme
 ./install.sh
 cd ..
-rm -r WhiteSur-gtk-theme.git
+rm -r WhiteSur-gtk-theme
 
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 cd papirus-icon-theme
@@ -44,3 +35,12 @@ dconf load /com/solus-project/ < budgie-backup
 cd ..
 rm -r budgieprefs
 
+#nautilus and other shit
+pacman -S nautilus gthumb gparted 7zip-bin --noconfirm
+
+
+#terminal
+pacman -S tilix tilda --noconfirm
+
+#enable gdm
+systemctl enable gdm
