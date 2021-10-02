@@ -170,6 +170,11 @@ alignment='end'
 name='Show Desktop Button'
 position=26
 
+[budgie-panel/applets/{93a221fc-0e6e-11ec-9e65-e0d4e8783629}]
+alignment='center'
+name='Icon Task List'
+position=0
+
 [budgie-panel/instance/icon-tasklist/{1aa4b346-1b0c-11ec-a18a-a402b98e6e30}]
 middle-click-launch-new-instance=true
 pinned-launchers=['org.gnome.Nautilus.desktop', 'firefox.desktop', 'org.gnome.Terminal.desktop']
