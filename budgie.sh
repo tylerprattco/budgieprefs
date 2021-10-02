@@ -1,7 +1,14 @@
 #!/bin/bash
 
-#install yay and git before-hand
-yay -Syu --noconfirm
+#git and yay
+pacman -S git base-devel
+cd /home/tyler
+su tyler git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -r yay
+su
 
 #dconf and wget
 pacman -S dconf wget --noconfirm
@@ -13,7 +20,8 @@ pacman -S gdm --noconfirm
 pacman -S --needed budgie-desktop network-manager-applet gnome-control-center budgie-desktop-view budgie-extras budgie-screensaver gnome-calculator gnome-tweaks firefox --noconfirm
 
 #budgie extra (SU NOTE)
-yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
+su tyler yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
+su
 
 #themes and shit
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
