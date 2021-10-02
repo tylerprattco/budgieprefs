@@ -1,10 +1,10 @@
 #!/bin/bash
-
+cd 
 #yay
 cd /home/tyler
 git clone https://aur.archlinux.org/yay.git
 cd yay
-runuser -l  tyler -c makepkg -si
+su - tyler -c "makepkg -si"
 cd ..
 rm -r yay
 
@@ -18,7 +18,7 @@ pacman -S gdm --noconfirm
 pacman -S --needed budgie-desktop network-manager-applet gnome-control-center budgie-desktop-view budgie-extras budgie-screensaver gnome-calculator gnome-tweaks firefox --noconfirm
 
 #budgie extra (SU NOTE)
-runuser -l tyler -c yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
+su - tyler -c "yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm"
 
 #themes and shit
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
@@ -36,7 +36,7 @@ rm -r papirus-icon-theme
 #budgie prefs
 git clone https://github.com/tylerprattco/budgieprefs.git
 cd budgieprefs
-runuser -l tyler -c dconf load / < full-backup
+su - tyler -c "dconf load / < full-backup"
 cd ..
 rm -r budgieprefs
 
