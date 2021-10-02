@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#git and yay
-pacman -S git base-devel
+#yay 
 cd /home/tyler
 su tyler git clone https://aur.archlinux.org/yay.git
 cd yay
