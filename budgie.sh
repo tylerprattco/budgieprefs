@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#yay 
-cd /home/tyler
-su tyler git clone https://aur.archlinux.org/yay.git
+#yay
+su tyler
+git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ..
-rm -r yay
+sudo rm -r yay
 su
 
 #dconf and wget
@@ -38,7 +38,8 @@ rm -r papirus-icon-theme
 #budgie prefs
 git clone https://github.com/tylerprattco/budgieprefs.git
 cd budgieprefs
-su tyler dconf load /com/solus-project/ < budgie-backup
+su tyler 
+dconf load /com/solus-project/ < budgie-backup
 cd ..
 rm -r budgieprefs
 
