@@ -49,3 +49,4 @@ pacman -S tilix tilda --noconfirm
 
 #enable gdm
 systemctl enable gdm
+systemctl start gdm
