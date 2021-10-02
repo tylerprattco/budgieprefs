@@ -39,7 +39,7 @@ rm -r papirus-icon-theme
 #budgie prefs
 git clone https://github.com/tylerprattco/budgieprefs.git
 cd budgieprefs
-dconf load /com/solus-project/ < budgie-backup
+su tyler dconf load /com/solus-project/ < budgie-backup
 cd ..
 rm -r budgieprefs
 
