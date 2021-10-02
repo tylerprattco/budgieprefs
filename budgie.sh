@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install yay and git before-hand
-yay -Syu
+yay -Syu --noconfirm
 
 #dconf and wget
 pacman -S dconf wget --noconfirm
