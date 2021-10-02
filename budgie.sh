@@ -19,7 +19,8 @@ pacman -S gdm --noconfirm
 pacman -S --needed budgie-desktop network-manager-applet gnome-control-center budgie-desktop-view budgie-extras budgie-screensaver gnome-calculator gnome-tweaks firefox --noconfirm
 
 #budgie extra (SU NOTE)
-su tyler yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
+su tyler 
+yay -S budgie-clipboard-applet budgie-screenshot-applet --noconfirm
 su
 
 #themes and shit
@@ -39,9 +40,10 @@ rm -r papirus-icon-theme
 git clone https://github.com/tylerprattco/budgieprefs.git
 cd budgieprefs
 su tyler 
-dconf load /com/solus-project/ < budgie-backup
+dconf load / < full-backup
 cd ..
 rm -r budgieprefs
+su
 
 #nautilus and other shit
 pacman -S nautilus gthumb gparted 7zip-bin --noconfirm
