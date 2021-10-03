@@ -1,5 +1,5 @@
 #!/bin/bash
-cd 
+
 #yay
 cd /home/tyler
 git clone https://aur.archlinux.org/yay.git
