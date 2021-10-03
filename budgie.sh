@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#git
-sudo pacman -S git base-devel --noconfirm
-git clone https://github.com/tylerprattco/budgieprefs.git
-cd budgieprefs
-
 #yay
 cd /home/tyler
 git clone https://aur.archlinux.org/yay.git
