@@ -41,7 +41,7 @@ cd ..
 sudo rm -r budgieprefs
 
 #nautilus and other shit
-sudo pacman -S nautilus gthumb gparted 7zip-bin btop --noconfirm
+sudo pacman -S nautilus gthumb gparted btop --noconfirm
 
 
 #terminal
