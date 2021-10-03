@@ -34,6 +34,8 @@ cd ..
 sudo rm -r papirus-icon-theme
 
 #budgie prefs
+sudo git clone https://github.com/tylerprattco/budgieprefs
+cd budgieprefs
 dconf load / < full-backup
 cd ..
 sudo rm -r budgieprefs
